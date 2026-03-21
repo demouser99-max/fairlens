@@ -1,7 +1,6 @@
 import shap
 import numpy as np
 
-
 def compute_shap_importance(model, X_train, X_test, feature_names):
     explainer = shap.LinearExplainer(model, X_train)
     shap_values = explainer.shap_values(X_test)
